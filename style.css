@@ -1,0 +1,77 @@
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #000;
+  --card-bg: #fff;
+  --progress-bg: #ddd;
+  --progress-color: limegreen;
+}
+
+.dark-mode {
+  --bg-color: #121212;
+  --text-color: #fff;
+  --card-bg: #1e1e1e;
+  --progress-bg: #333;
+  --progress-color: lime;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  background: var(--card-bg);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 12px;
+}
+
+.progress-container {
+  width: 100%;
+  background: var(--progress-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 30px;
+  margin: 20px 0;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--progress-color);
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+.countdown {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.theme-toggle {
+  margin-top: 15px;
+  cursor: pointer;
+  padding: 8px 16px;
+  background: transparent;
+  border: 2px solid var(--text-color);
+  border-radius: 8px;
+  font-family: Georgia, serif;
+  color: var(--text-color);
+}
+
+@media (max-width: 600px) {
+  .countdown {
+    font-size: 1rem;
+  }
+}
